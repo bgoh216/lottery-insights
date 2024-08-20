@@ -1,0 +1,54 @@
+{
+  "date": "Mon, 05 Aug 2024",
+  "drawNo": "3997",
+  "winningNumbers": [
+    "1",
+    "12",
+    "15",
+    "30",
+    "42",
+    "43"
+  ],
+  "additionalNumber": "22",
+  "group1Prize": "$1,223,520",
+  "winningShares": {
+    "Group 1": {
+      "shareAmount": "-",
+      "numberOfWinningShares": "-",
+      "soldAt": []
+    },
+    "Group 2": {
+      "shareAmount": "$128,792",
+      "numberOfWinningShares": "2",
+      "soldAt": [
+        "Kim Chwee Trading - Block 256 Jurong East Street 24 #01-385 ( 1 QuickPick System 7 Entry )",
+        "NTUC FairPrice Bedok North Street 1 - Block 212 Bedok North Street 1 #01-147 ( 1 QuickPick Ordinary Entry )"
+      ]
+    },
+    "Group 3": {
+      "shareAmount": "$1,640",
+      "numberOfWinningShares": "108",
+      "soldAt": []
+    },
+    "Group 4": {
+      "shareAmount": "$364",
+      "numberOfWinningShares": "266",
+      "soldAt": []
+    },
+    "Group 5": {
+      "shareAmount": "$50",
+      "numberOfWinningShares": "5,424",
+      "soldAt": []
+    },
+    "Group 6": {
+      "shareAmount": "$25",
+      "numberOfWinningShares": "7,473",
+      "soldAt": []
+    },
+    "Group 7": {
+      "shareAmount": "$10",
+      "numberOfWinningShares": "99,569",
+      "soldAt": []
+    }
+  }
+}

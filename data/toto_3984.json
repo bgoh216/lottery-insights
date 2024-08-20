@@ -1,0 +1,58 @@
+{
+  "date": "Thu, 20 Jun 2024",
+  "drawNo": "3984",
+  "winningNumbers": [
+    "3",
+    "12",
+    "14",
+    "16",
+    "17",
+    "30"
+  ],
+  "additionalNumber": "27",
+  "group1Prize": "$1,195,673",
+  "winningShares": [
+    {
+      "prizeGroup": "Group 1",
+      "shareAmount": "$1,195,673",
+      "numberOfWinningShares": "1",
+      "soldAt": []
+    },
+    {
+      "prizeGroup": "Group 2",
+      "shareAmount": "$27,969",
+      "numberOfWinningShares": "9",
+      "soldAt": []
+    },
+    {
+      "prizeGroup": "Group 3",
+      "shareAmount": "$1,342",
+      "numberOfWinningShares": "129",
+      "soldAt": []
+    },
+    {
+      "prizeGroup": "Group 4",
+      "shareAmount": "$271",
+      "numberOfWinningShares": "349",
+      "soldAt": []
+    },
+    {
+      "prizeGroup": "Group 5",
+      "shareAmount": "$50",
+      "numberOfWinningShares": "7,703",
+      "soldAt": []
+    },
+    {
+      "prizeGroup": "Group 6",
+      "shareAmount": "$25",
+      "numberOfWinningShares": "8,712",
+      "soldAt": []
+    },
+    {
+      "prizeGroup": "Group 7",
+      "shareAmount": "$10",
+      "numberOfWinningShares": "111,517",
+      "soldAt": []
+    }
+  ]
+}

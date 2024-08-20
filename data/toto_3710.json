@@ -1,0 +1,51 @@
+{
+  "date": "Thu, 04 Nov 2021",
+  "drawNo": "3710",
+  "winningNumbers": [
+    "7",
+    "18",
+    "22",
+    "36",
+    "44",
+    "45"
+  ],
+  "additionalNumber": "30",
+  "group1Prize": "$1,170,858",
+  "winningShares": {
+    "Group 1": {
+      "shareAmount": "-",
+      "numberOfWinningShares": "-",
+      "soldAt": []
+    },
+    "Group 2": {
+      "shareAmount": "-",
+      "numberOfWinningShares": "-",
+      "soldAt": []
+    },
+    "Group 3": {
+      "shareAmount": "$2,291",
+      "numberOfWinningShares": "74",
+      "soldAt": []
+    },
+    "Group 4": {
+      "shareAmount": "$561",
+      "numberOfWinningShares": "165",
+      "soldAt": []
+    },
+    "Group 5": {
+      "shareAmount": "$50",
+      "numberOfWinningShares": "4,727",
+      "soldAt": []
+    },
+    "Group 6": {
+      "shareAmount": "$25",
+      "numberOfWinningShares": "5,881",
+      "soldAt": []
+    },
+    "Group 7": {
+      "shareAmount": "$10",
+      "numberOfWinningShares": "85,625",
+      "soldAt": []
+    }
+  }
+}
