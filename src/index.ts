@@ -2,6 +2,10 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import * as fs from 'fs/promises';
 import * as path from 'path';
+import { MikroORM } from '@mikro-orm/postgresql'; // or any other driver package
+
+import { __dirname } from './constants/helper.js';
+import config from './mikro-orm.config.js';
 
 // Interfaces for our scraped data
 type WinningShare = {
@@ -93,10 +97,10 @@ function extractAddresses(text: string): string[] {
 function extractFirstTwoWords(text: string): string {
     // Remove leading and trailing whitespace
     const trimmedText = text.trim();
-    
+
     // Split the text into words
     const words = trimmedText.split(/\s+/);
-    
+
     // Return the first two words, or the whole string if less than two words
     return words.slice(0, 2).join(' ');
 }
@@ -311,6 +315,16 @@ async function runETL(): Promise<void> {
 // });
 
 // Run the ETL process immediately (for testing)
-runETL();
+// runETL();
+
+
+
+(async () => {
+    // initialize the ORM, loading the config file dynamically
+    const orm = await MikroORM.init(config);
+    console.log(orm.em); // access EntityManager via `em` property
+    console.log(orm.schema); // access SchemaGeneartor via `schema` property
+
+})
 
 console.log('ETL pipeline started. Waiting for scheduled runs...');
