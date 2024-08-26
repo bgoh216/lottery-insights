@@ -2,48 +2,10 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { MikroORM } from '@mikro-orm/postgresql'; // or any other driver package
 
 import { __dirname } from './constants/helper.js';
-import config from './mikro-orm.config.js';
-
-// Interfaces for our scraped data
-type WinningShare = {
-    shareAmount: string;
-    numberOfWinningShares: string;
-    soldAt: string[];
-}
-
-type WinningShares = {
-    'Group 1': WinningShare,
-    'Group 2': WinningShare,
-    'Group 3': WinningShare,
-    'Group 4': WinningShare,
-    'Group 5': WinningShare,
-    'Group 6': WinningShare,
-    'Group 7': WinningShare,
-}
-
-interface TotoResult {
-    date: string;
-    drawNo: string;
-    winningNumbers: string[];
-    additionalNumber: string;
-    group1Prize: string;
-    winningShares: { [groupNumber: string]: WinningShare };
-}
-
-interface FourDResult {
-    drawDate: string;
-    drawNumber: string;
-    topPrizes: {
-        prize: string;
-        number: string;
-        amount: string;
-    }[];
-    startingNumber?: string;
-    endingNumber?: string;
-}
+import { FourDResult, TotoResult, WinningShare } from './models/Toto.js';
+import { initializeTotoDatabase, saveTotoToDatabase } from './utils/database/helper.js';
 
 function processITOTOString(input: string, processedSentences: string[]) {
     // Split the input string by "iTOTO - System" to separate different systems
@@ -124,7 +86,8 @@ async function scrapeToto(): Promise<TotoResult> {
     // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
     // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zOTk2';
     // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zNzEw';
-    const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zNjg1';
+    // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zNjg1';
+    const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zOTcy';
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
 
@@ -286,7 +249,7 @@ async function scrapeFourD(): Promise<FourDResult> {
 }
 
 // Function to save data to a JSON file
-async function saveData(data: TotoResult | FourDResult, filename: string): Promise<void> {
+async function saveDataToFile(data: TotoResult | FourDResult, filename: string): Promise<void> {
     const folderPath = path.join(__dirname, 'data');
     await fs.mkdir(folderPath, { recursive: true });
     const filePath = path.join(folderPath, filename);
@@ -295,14 +258,19 @@ async function saveData(data: TotoResult | FourDResult, filename: string): Promi
 
 // Main function to run the ETL process
 async function runETL(): Promise<void> {
+    await initializeTotoDatabase();
+
     try {
         const totoData = await scrapeToto();
-        await saveData(totoData, `toto_${totoData.drawNo}.json`);
+        await saveDataToFile(totoData, `toto_${totoData.drawNo}.json`);
+        await saveTotoToDatabase(totoData);
+
+
         console.log(`TOTO data saved for draw ${totoData.drawNo}`);
 
-        const fourDData = await scrapeFourD();
-        await saveData(fourDData, `4d_${fourDData.drawNumber}.json`);
-        console.log(`4D data saved for draw ${fourDData.drawNumber}`);
+        // const fourDData = await scrapeFourD();
+        // await saveData(fourDData, `4d_${fourDData.drawNumber}.json`);
+        // console.log(`4D data saved for draw ${fourDData.drawNumber}`);
     } catch (error) {
         console.error('Error in ETL process:', error);
     }
@@ -314,17 +282,9 @@ async function runETL(): Promise<void> {
 //   runETL();
 // });
 
+// connectToDatabase();
+
 // Run the ETL process immediately (for testing)
-// runETL();
-
-
-
-(async () => {
-    // initialize the ORM, loading the config file dynamically
-    const orm = await MikroORM.init(config);
-    console.log(orm.em); // access EntityManager via `em` property
-    console.log(orm.schema); // access SchemaGeneartor via `schema` property
-
-})
+runETL();
 
 console.log('ETL pipeline started. Waiting for scheduled runs...');
