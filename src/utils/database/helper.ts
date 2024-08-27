@@ -3,7 +3,7 @@ import { createDrawTable } from './sql-queries/create/create-draw-table.js';
 import { createWinningGroupTable } from './sql-queries/create/create-winning-group-table.js';
 import { createAddressTable } from './sql-queries/create/create-address-table.js';
 import { TotoResult } from '../../models/Toto.js';
-import { convertToDollars, convertToSQLDate } from '../helper-functions/sql-helpers.js';
+import { convertToDollars, convertToSQLDate, extractAddressAndType } from '../helper-functions/sql-helpers.js';
 
 export async function initializeTotoDatabase() {
     try {
@@ -64,22 +64,35 @@ export async function saveTotoToDatabase(totoData: TotoResult) {
 
         for (const [groupNo, winningShare] of Object.entries(totoData.winningShares)) {
             console.log(`Inserting ${groupNo} for draw: ${totoData.drawNo}...`)
-            const insertWinningGroupTableQuery: string = `
-                INSERT INTO public."WinningGroup" (winning_group_id, draw_no, group_no, share_amount, no_of_winning_shares)
-                VALUES (
-                    ${parseInt(`${totoData.drawNo}${groupNo.split(' ')[1]}`)}, 
-                    ${totoData.drawNo},
-                    ${parseInt(groupNo.split(' ')[1])},
-                    ${convertToDollars(winningShare.shareAmount)},
-                    ${convertToDollars(winningShare.numberOfWinningShares)});
-            `;
-            console.log(insertWinningGroupTableQuery);
-            await client.query(insertWinningGroupTableQuery);
-        }
-        console.log(`WinningGroup table of draw: ${totoData.drawNo} successfully inserted`);
+            const winningGroupId: number = parseInt(`${totoData.drawNo}${groupNo.split(' ')[1]}`);
+            // const insertWinningGroupTableQuery: string = `
+            //     INSERT INTO public."WinningGroup" (winning_group_id, draw_no, group_no, share_amount, no_of_winning_shares)
+            //     VALUES (
+            //         ${winningGroupId}, 
+            //         ${totoData.drawNo},
+            //         ${parseInt(groupNo.split(' ')[1])},
+            //         ${convertToDollars(winningShare.shareAmount)},
+            //         ${convertToDollars(winningShare.numberOfWinningShares)});
+            // `;
+            // console.log(insertWinningGroupTableQuery);
+            // await client.query(insertWinningGroupTableQuery);
 
-        const insertAddressTableQuery: string = ``;
-        await client.query(insertAddressTableQuery);
+            for (const address of winningShare.soldAt) {
+                const addressAndType: { address: string; type: string } = extractAddressAndType(address);
+                console.log(addressAndType)
+                const insertAddressTableQuery: string = `
+                    INSERT INTO public."Address" (address, winning_type, winning_group_id)
+                    VALUES (
+                        '${addressAndType.address}', 
+                        '${addressAndType.type}',
+                        ${winningGroupId}
+                    );`;
+                console.log(insertAddressTableQuery)
+                await client.query(insertAddressTableQuery);
+            }
+        }
+
+        console.log(`WinningGroup table of draw: ${totoData.drawNo} successfully inserted`);
         console.log(`Address table of draw: ${totoData.drawNo} successfully inserted`);
 
         await client.end();

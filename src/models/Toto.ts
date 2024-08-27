@@ -34,3 +34,6 @@ export interface FourDResult {
     startingNumber?: string;
     endingNumber?: string;
 }
+
+// iTOTO / 28 is the amount
+// https://online.singaporepools.com/en/lottery/comparison-between-toto-itoto
