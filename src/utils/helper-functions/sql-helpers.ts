@@ -8,9 +8,9 @@ export function convertToDollars(moneyStr: string): number {
 }
 
 export function extractAddressAndType(str: string): { address: string; type: string } {
-    const match = str.match(/(.*?)\s*\((.*?)\)\s*$/);
+    const match = str.match(/(.*)\(([^()]+)\)[^()]*$/);
     return {
-        address: match?.[1].replace(/[\s-]+$/, '').trim() ?? '',
+        address: match?.[1].replace(/[\s-]+$/, '').trim() ?? str,
         type: match?.[2].trim() ?? ''
     };
 }

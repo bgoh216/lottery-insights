@@ -33,9 +33,9 @@ function extractAddresses(text: string): string[] {
     // const cleanedText: string = text.replace(/[\n\r]+/g, ' ').trim();
     const cleanedText: string = text.replace(/\s+/g, ' ').trim();
 
-    console.log('-------------cleanedText----------------')
-    console.log(cleanedText);
-    console.log('-------------------------------------')
+    // console.log('-------------cleanedText----------------')
+    // console.log(cleanedText);
+    // console.log('-------------------------------------')
 
     // Split the text into sentences
     // const rawSentences: string[] = cleanedText.split(/(?<=\))/);
