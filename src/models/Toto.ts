@@ -25,7 +25,7 @@ export interface TotoResult {
 
 export interface FourDResult {
     drawDate: string;
-    drawNumber: string;
+    drawNo: string;
     topPrizes: {
         prize: string;
         number: string;

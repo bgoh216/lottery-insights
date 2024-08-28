@@ -5,7 +5,7 @@ import { createDrawTable } from './sql-queries/create/create-draw-table.js';
 import { createWinningGroupTable } from './sql-queries/create/create-winning-group-table.js';
 import { createAddressTable } from './sql-queries/create/create-address-table.js';
 import { TotoResult } from '../../models/Toto.js';
-import { convertToDollars, convertToSQLDate, extractAddressAndType } from '../helper-functions/sql-helpers.js';
+import { convertToDollars, convertToSQLDate, escapeSingleQuotes, extractAddressAndType } from '../helper-functions/sql-helpers.js';
 
 export async function initializeTotoDatabase() {
     try {
@@ -75,7 +75,9 @@ export async function saveTotoToDatabase(totoData: TotoResult): Promise<void> {
                     ${convertToDollars(winningShare.shareAmount)},
                     ${convertToDollars(winningShare.numberOfWinningShares)});
             `;
+            // console.log(insertWinningGroupTableQuery);
             await client.query(insertWinningGroupTableQuery);
+            console.log(`${groupNo} successfully inserted.`);
 
             for (const address of winningShare.soldAt) {
                 const addressAndType: { address: string; type: string } = extractAddressAndType(address);
@@ -83,16 +85,16 @@ export async function saveTotoToDatabase(totoData: TotoResult): Promise<void> {
                     INSERT INTO public."Address" (address_id, address, winning_type, winning_group_id)
                     VALUES (
                         '${uuidv4()}',
-                        '${addressAndType.address}', 
+                        '${escapeSingleQuotes(addressAndType.address)}', 
                         '${addressAndType.type}',
                         ${winningGroupId}
                     );`;
+                // console.log(insertAddressTableQuery);
                 await client.query(insertAddressTableQuery);
             }
+            console.log(`Address successfully inserted`);
         }
 
-        console.log(`WinningGroup table of draw: ${totoData.drawNo} successfully inserted`);
-        console.log(`Address table of draw: ${totoData.drawNo} successfully inserted`);
     } catch (error: any) {
         if (error.code == '23505') {
             console.info(`Draw number ${totoData.drawNo} have been inserted. Skipping...`);

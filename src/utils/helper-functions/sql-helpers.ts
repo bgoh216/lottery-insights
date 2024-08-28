@@ -4,6 +4,7 @@ export function convertToSQLDate(dateStr: string): string {
 }
 
 export function convertToDollars(moneyStr: string): number {
+    if (moneyStr === '-') return 0;
     return parseInt(moneyStr.replace(/[^0-9]/g, ''), 10);
 }
 
@@ -13,4 +14,8 @@ export function extractAddressAndType(str: string): { address: string; type: str
         address: match?.[1].replace(/[\s-]+$/, '').trim() ?? str,
         type: match?.[2].trim() ?? ''
     };
+}
+
+export function escapeSingleQuotes(str: string): string {
+    return str.replace(/'/g, "''");
 }

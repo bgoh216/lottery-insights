@@ -1,11 +1,18 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import puppeteer from 'puppeteer';
 import * as fs from 'fs/promises';
 import * as path from 'path';
 
 import { __dirname } from './constants/helper.js';
 import { FourDResult, TotoResult, WinningShare } from './models/Toto.js';
 import { initializeTotoDatabase, saveTotoToDatabase } from './utils/database/helper.js';
+
+interface DrawInfo {
+    querystring: string;
+    value: string;
+    date: string;
+}
 
 function processITOTOString(input: string, processedSentences: string[]) {
     // Split the input string by "iTOTO - System" to separate different systems
@@ -30,15 +37,9 @@ function processITOTOString(input: string, processedSentences: string[]) {
 
 function extractAddresses(text: string): string[] {
     // Remove extra whitespace and newlines
-    // const cleanedText: string = text.replace(/[\n\r]+/g, ' ').trim();
     const cleanedText: string = text.replace(/\s+/g, ' ').trim();
 
-    // console.log('-------------cleanedText----------------')
-    // console.log(cleanedText);
-    // console.log('-------------------------------------')
-
     // Split the text into sentences
-    // const rawSentences: string[] = cleanedText.split(/(?<=\))/);
     const rawSentences: string[] = cleanedText.split(/(?<=Entry \))/);;
     const processedSentences: string[] = [];
     for (let i = 0; i < rawSentences.length; i++) {
@@ -67,27 +68,8 @@ function extractFirstTwoWords(text: string): string {
     return words.slice(0, 2).join(' ');
 }
 
-async function fetchHtml(url: string): Promise<string> {
-    try {
-        const response = await axios.get(url, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-            }
-        });
-        return response.data;
-    } catch (error) {
-        console.error(`Error fetching URL ${url}:`, error);
-        throw error;
-    }
-}
-
 // Scraping function for TOTO
-async function scrapeToto(): Promise<TotoResult> {
-    // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
-    // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zOTk2';
-    // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zNzEw';
-    // const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zNjg1';
-    const url = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx?sppl=RHJhd051bWJlcj0zOTcy';
+async function scrapeToto(url: string): Promise<TotoResult> {
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
 
@@ -195,23 +177,7 @@ async function scrapeToto(): Promise<TotoResult> {
             currentGroup = extractFirstTwoWords(text);
             if (text.includes('winning')) toExtract = true;
         }
-        // else if (currentGroup && $(element).is('ul')) {
-        //     const soldAt = $(element).find('li').map((_, li) => $(li).text().trim()).get();
-        //     const winningShare = result.winningShares.find(ws => ws.prizeGroup === currentGroup);
-        //     if (winningShare) {
-        //         winningShare.soldAt = soldAt;
-        //     }
-        // }
     });
-
-    // Check if Group 1 has no winner
-    // const group1Info = winningOutletsDiv.text();
-    // if (group1Info.includes("Group 1 has no winner")) {
-    //     const group1Share = result.winningShares.find(ws => ws.prizeGroup === '1');
-    //     if (group1Share) {
-    //         group1Share.soldAt = ["No winner"];
-    //     }
-    // }
 
     return result;
 }
@@ -225,12 +191,12 @@ async function scrapeFourD(): Promise<FourDResult> {
 
     const result: FourDResult = {
         drawDate: '',
-        drawNumber: '',
+        drawNo: '',
         topPrizes: [],
     };
 
     result.drawDate = tablesWrap.find('.drawDate').text().trim();
-    result.drawNumber = tablesWrap.find('.drawNumber').text().trim().replace('Draw No. ', '');
+    result.drawNo = tablesWrap.find('.drawNumber').text().trim().replace('Draw No. ', '');
 
     tablesWrap.find('.table:first-child tbody tr').each((i, el) => {
         const columns = $(el).find('td');
@@ -248,25 +214,74 @@ async function scrapeFourD(): Promise<FourDResult> {
     return result;
 }
 
+function isToto(obj: any): obj is TotoResult {
+    return typeof obj === 'object' && obj !== null && 'drawNo' in obj && 'winningShares' in obj;
+}
+
+function is4D(obj: any): obj is FourDResult {
+    return typeof obj === 'object' && obj !== null && 'drawNo' in obj && 'topPrizes' in obj;
+}
+
 // Function to save data to a JSON file
 async function saveDataToFile(data: TotoResult | FourDResult, filename: string): Promise<void> {
-    const folderPath = path.join(__dirname, 'data');
+    let folderPath = path.join(__dirname, 'data');
+    if (isToto(data)) folderPath = path.join(folderPath, 'toto');
+    if (is4D(data)) folderPath = path.join(folderPath, '4d');
+
     await fs.mkdir(folderPath, { recursive: true });
     const filePath = path.join(folderPath, filename);
     await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
-// Main function to run the ETL process
-async function runETL(): Promise<void> {
-    await initializeTotoDatabase();
+async function getDrawList(): Promise<DrawInfo[]> {
+    console.log('Fetching draw list...');
+    const browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
 
     try {
-        const totoData = await scrapeToto();
-        await saveDataToFile(totoData, `toto_${totoData.drawNo}.json`);
-        await saveTotoToDatabase(totoData);
+        await page.goto('https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx', { waitUntil: 'networkidle0' });
 
+        // Wait for the dropdown to be present
+        await page.waitForSelector('.form-control.selectDrawList', { timeout: 10000 });
 
-        console.log(`TOTO data saved for draw ${totoData.drawNo}`);
+        // Click the dropdown to populate it
+        await page.click('.form-control.selectDrawList');
+
+        // Extract the draw list
+        const drawList = await page.evaluate(() => {
+            const options = Array.from(document.querySelectorAll('.form-control.selectDrawList option'));
+            return options.map(option => ({
+                querystring: option.getAttribute('querystring') || '',
+                value: option.getAttribute('value') || '',
+                date: option.textContent?.trim() || ''
+            }));
+        });
+
+        return drawList;
+    } finally {
+        await browser.close();
+    }
+}
+
+// Main function to run the ETL process
+async function runETL(): Promise<void> {
+    const baseUrl = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
+    await initializeTotoDatabase();
+
+    const drawList = await getDrawList();
+    console.log(`Found ${drawList.length} draws`);
+
+    try {
+        for (const draw of drawList) {
+            const url = `${baseUrl}?${draw.querystring}`;
+            console.log(`Crawling: ${url}...`);
+
+            const totoData = await scrapeToto(url);
+            await saveDataToFile(totoData, `toto_${totoData.drawNo}.json`);
+            await saveTotoToDatabase(totoData);
+
+            console.log(`TOTO data saved for draw ${totoData.drawNo}`);
+        }
 
         // const fourDData = await scrapeFourD();
         // await saveData(fourDData, `4d_${fourDData.drawNumber}.json`);
@@ -281,8 +296,6 @@ async function runETL(): Promise<void> {
 //   console.log('Running scheduled ETL process');
 //   runETL();
 // });
-
-// connectToDatabase();
 
 // Run the ETL process immediately (for testing)
 runETL();
