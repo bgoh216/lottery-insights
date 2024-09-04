@@ -6,10 +6,11 @@ WITH all_numbers AS (
     UNION ALL SELECT winning_number_4 FROM public."Draw"
     UNION ALL SELECT winning_number_5 FROM public."Draw"
     UNION ALL SELECT winning_number_6 FROM public."Draw"
+    UNION ALL SELECT additional_number FROM public."Draw"
 )
 SELECT 
     number,
-    COUNT(*) as frequency
+    COUNT(number) as frequency
 FROM 
     all_numbers
 GROUP BY 

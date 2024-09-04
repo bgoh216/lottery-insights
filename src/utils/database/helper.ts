@@ -107,3 +107,24 @@ export async function saveTotoToDatabase(totoData: TotoResult): Promise<void> {
     }
 }
 
+export async function getData(sqlQuery: string): Promise<any> {
+    const { Client } = pg;
+    const client = new Client({
+        user: 'postgres',
+        password: 'password',
+        host: 'localhost',
+        port: 5432,
+        database: 'Toto',
+    });
+    await client.connect();
+    console.log(`Successfully connected to ${client.database} database.`);
+
+    try {
+        const result = await client.query(sqlQuery);
+        console.log(`Successfully retrieved data.`);
+        return result;
+    } catch (error) {
+        throw new Error('Error fetching query');
+    }
+}
+

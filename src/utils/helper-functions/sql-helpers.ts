@@ -1,3 +1,6 @@
+import * as fs from 'fs/promises';
+import * as path from 'path';
+
 export function convertToSQLDate(dateStr: string): string {
     const date = new Date(dateStr);
     return date.toISOString().split('T')[0];
@@ -18,4 +21,15 @@ export function extractAddressAndType(str: string): { address: string; type: str
 
 export function escapeSingleQuotes(str: string): string {
     return str.replace(/'/g, "''");
+}
+
+export async function readFileToString(filePath: string): Promise<string> {
+    try {
+        const resolvedPath = path.resolve(filePath);
+        const fileContents = await fs.readFile(resolvedPath, 'utf8');
+        return fileContents;
+    } catch (error) {
+        console.error(`Error reading file: ${error}`);
+        return '';
+    }
 }

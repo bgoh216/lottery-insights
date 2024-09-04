@@ -3,10 +3,14 @@ import * as cheerio from 'cheerio';
 import puppeteer from 'puppeteer';
 import * as fs from 'fs/promises';
 import * as path from 'path';
+import dotenv from "dotenv";
 
 import { __dirname } from './constants/helper.js';
+import express, { Express, Request, Response } from "express";
 import { FourDResult, TotoResult, WinningShare } from './models/Toto.js';
-import { initializeTotoDatabase, saveTotoToDatabase } from './utils/database/helper.js';
+import { getData, initializeTotoDatabase, saveTotoToDatabase } from './utils/database/helper.js';
+import { totoRoutes } from './controllers/toto.js';
+import { readFileToString } from './utils/helper-functions/sql-helpers.js';
 
 interface DrawInfo {
     querystring: string;
@@ -298,6 +302,26 @@ async function runETL(): Promise<void> {
 // });
 
 // Run the ETL process immediately (for testing)
-runETL();
+// runETL();
 
 console.log('ETL pipeline started. Waiting for scheduled runs...');
+dotenv.config();
+
+const app: Express = express();
+const port = process.env.PORT || 3000;
+
+
+app.use(express.json());
+app.use('/toto', totoRoutes);
+
+app.get("/", (req: Request, res: Response) => {
+    res.send("Welcome");
+});
+
+app.get("/", (req: Request, res: Response) => {
+    res.send("Welcome");
+});
+
+app.listen(port, () => {
+    console.log(`[server]: Server is running at http://localhost:${port}`);
+});
