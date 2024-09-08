@@ -1,0 +1,2352 @@
+[
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjIw",
+    "value": "5220",
+    "date": "Sun, 08 Sep 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjE5",
+    "value": "5219",
+    "date": "Sat, 07 Sep 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjE4",
+    "value": "5218",
+    "date": "Wed, 04 Sep 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjE3",
+    "value": "5217",
+    "date": "Sun, 01 Sep 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjE2",
+    "value": "5216",
+    "date": "Sat, 31 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjE1",
+    "value": "5215",
+    "date": "Wed, 28 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjE0",
+    "value": "5214",
+    "date": "Sun, 25 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjEz",
+    "value": "5213",
+    "date": "Sat, 24 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjEy",
+    "value": "5212",
+    "date": "Wed, 21 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjEx",
+    "value": "5211",
+    "date": "Sun, 18 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjEw",
+    "value": "5210",
+    "date": "Sat, 17 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjA5",
+    "value": "5209",
+    "date": "Wed, 14 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjA4",
+    "value": "5208",
+    "date": "Sun, 11 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjA3",
+    "value": "5207",
+    "date": "Sat, 10 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjA2",
+    "value": "5206",
+    "date": "Wed, 07 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjA1",
+    "value": "5205",
+    "date": "Sun, 04 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjA0",
+    "value": "5204",
+    "date": "Sat, 03 Aug 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjAz",
+    "value": "5203",
+    "date": "Wed, 31 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjAy",
+    "value": "5202",
+    "date": "Sun, 28 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjAx",
+    "value": "5201",
+    "date": "Sat, 27 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MjAw",
+    "value": "5200",
+    "date": "Wed, 24 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTk5",
+    "value": "5199",
+    "date": "Sun, 21 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTk4",
+    "value": "5198",
+    "date": "Sat, 20 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTk3",
+    "value": "5197",
+    "date": "Wed, 17 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTk2",
+    "value": "5196",
+    "date": "Sun, 14 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTk1",
+    "value": "5195",
+    "date": "Sat, 13 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTk0",
+    "value": "5194",
+    "date": "Wed, 10 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTkz",
+    "value": "5193",
+    "date": "Sun, 07 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTky",
+    "value": "5192",
+    "date": "Sat, 06 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTkx",
+    "value": "5191",
+    "date": "Wed, 03 Jul 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTkw",
+    "value": "5190",
+    "date": "Sun, 30 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTg5",
+    "value": "5189",
+    "date": "Sat, 29 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTg4",
+    "value": "5188",
+    "date": "Wed, 26 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTg3",
+    "value": "5187",
+    "date": "Sun, 23 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTg2",
+    "value": "5186",
+    "date": "Sat, 22 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTg1",
+    "value": "5185",
+    "date": "Wed, 19 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTg0",
+    "value": "5184",
+    "date": "Sun, 16 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTgz",
+    "value": "5183",
+    "date": "Sat, 15 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTgy",
+    "value": "5182",
+    "date": "Wed, 12 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTgx",
+    "value": "5181",
+    "date": "Sun, 09 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTgw",
+    "value": "5180",
+    "date": "Sat, 08 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTc5",
+    "value": "5179",
+    "date": "Wed, 05 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTc4",
+    "value": "5178",
+    "date": "Sun, 02 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTc3",
+    "value": "5177",
+    "date": "Sat, 01 Jun 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTc2",
+    "value": "5176",
+    "date": "Wed, 29 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTc1",
+    "value": "5175",
+    "date": "Sun, 26 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTc0",
+    "value": "5174",
+    "date": "Sat, 25 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTcz",
+    "value": "5173",
+    "date": "Wed, 22 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTcy",
+    "value": "5172",
+    "date": "Sun, 19 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTcx",
+    "value": "5171",
+    "date": "Sat, 18 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTcw",
+    "value": "5170",
+    "date": "Wed, 15 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTY5",
+    "value": "5169",
+    "date": "Sun, 12 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTY4",
+    "value": "5168",
+    "date": "Sat, 11 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTY3",
+    "value": "5167",
+    "date": "Wed, 08 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTY2",
+    "value": "5166",
+    "date": "Sun, 05 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTY1",
+    "value": "5165",
+    "date": "Sat, 04 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTY0",
+    "value": "5164",
+    "date": "Wed, 01 May 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTYz",
+    "value": "5163",
+    "date": "Sun, 28 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTYy",
+    "value": "5162",
+    "date": "Sat, 27 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTYx",
+    "value": "5161",
+    "date": "Wed, 24 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTYw",
+    "value": "5160",
+    "date": "Sun, 21 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTU5",
+    "value": "5159",
+    "date": "Sat, 20 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTU4",
+    "value": "5158",
+    "date": "Wed, 17 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTU3",
+    "value": "5157",
+    "date": "Sun, 14 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTU2",
+    "value": "5156",
+    "date": "Sat, 13 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTU1",
+    "value": "5155",
+    "date": "Wed, 10 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTU0",
+    "value": "5154",
+    "date": "Sun, 07 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTUz",
+    "value": "5153",
+    "date": "Sat, 06 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTUy",
+    "value": "5152",
+    "date": "Wed, 03 Apr 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTUx",
+    "value": "5151",
+    "date": "Sun, 31 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTUw",
+    "value": "5150",
+    "date": "Sat, 30 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQ5",
+    "value": "5149",
+    "date": "Wed, 27 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQ4",
+    "value": "5148",
+    "date": "Sun, 24 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQ3",
+    "value": "5147",
+    "date": "Sat, 23 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQ2",
+    "value": "5146",
+    "date": "Wed, 20 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQ1",
+    "value": "5145",
+    "date": "Sun, 17 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQ0",
+    "value": "5144",
+    "date": "Sat, 16 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQz",
+    "value": "5143",
+    "date": "Wed, 13 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQy",
+    "value": "5142",
+    "date": "Sun, 10 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQx",
+    "value": "5141",
+    "date": "Sat, 09 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTQw",
+    "value": "5140",
+    "date": "Wed, 06 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTM5",
+    "value": "5139",
+    "date": "Sun, 03 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTM4",
+    "value": "5138",
+    "date": "Sat, 02 Mar 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTM3",
+    "value": "5137",
+    "date": "Wed, 28 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTM2",
+    "value": "5136",
+    "date": "Sun, 25 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTM1",
+    "value": "5135",
+    "date": "Sat, 24 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTM0",
+    "value": "5134",
+    "date": "Wed, 21 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTMz",
+    "value": "5133",
+    "date": "Sun, 18 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTMy",
+    "value": "5132",
+    "date": "Sat, 17 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTMx",
+    "value": "5131",
+    "date": "Wed, 14 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTMw",
+    "value": "5130",
+    "date": "Sun, 11 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTI5",
+    "value": "5129",
+    "date": "Sat, 10 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTI4",
+    "value": "5128",
+    "date": "Wed, 07 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTI3",
+    "value": "5127",
+    "date": "Sun, 04 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTI2",
+    "value": "5126",
+    "date": "Sat, 03 Feb 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTI1",
+    "value": "5125",
+    "date": "Wed, 31 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTI0",
+    "value": "5124",
+    "date": "Sun, 28 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTIz",
+    "value": "5123",
+    "date": "Sat, 27 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTIy",
+    "value": "5122",
+    "date": "Wed, 24 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTIx",
+    "value": "5121",
+    "date": "Sun, 21 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTIw",
+    "value": "5120",
+    "date": "Sat, 20 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTE5",
+    "value": "5119",
+    "date": "Wed, 17 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTE4",
+    "value": "5118",
+    "date": "Sun, 14 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTE3",
+    "value": "5117",
+    "date": "Sat, 13 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTE2",
+    "value": "5116",
+    "date": "Wed, 10 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTE1",
+    "value": "5115",
+    "date": "Sun, 07 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTE0",
+    "value": "5114",
+    "date": "Sat, 06 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTEz",
+    "value": "5113",
+    "date": "Wed, 03 Jan 2024"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTEy",
+    "value": "5112",
+    "date": "Sun, 31 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTEx",
+    "value": "5111",
+    "date": "Sat, 30 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTEw",
+    "value": "5110",
+    "date": "Wed, 27 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTA5",
+    "value": "5109",
+    "date": "Sun, 24 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTA4",
+    "value": "5108",
+    "date": "Sat, 23 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTA3",
+    "value": "5107",
+    "date": "Wed, 20 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTA2",
+    "value": "5106",
+    "date": "Sun, 17 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTA1",
+    "value": "5105",
+    "date": "Sat, 16 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTA0",
+    "value": "5104",
+    "date": "Wed, 13 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTAz",
+    "value": "5103",
+    "date": "Sun, 10 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTAy",
+    "value": "5102",
+    "date": "Sat, 09 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTAx",
+    "value": "5101",
+    "date": "Wed, 06 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MTAw",
+    "value": "5100",
+    "date": "Sun, 03 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDk5",
+    "value": "5099",
+    "date": "Sat, 02 Dec 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDk4",
+    "value": "5098",
+    "date": "Wed, 29 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDk3",
+    "value": "5097",
+    "date": "Sun, 26 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDk2",
+    "value": "5096",
+    "date": "Sat, 25 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDk1",
+    "value": "5095",
+    "date": "Wed, 22 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDk0",
+    "value": "5094",
+    "date": "Sun, 19 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDkz",
+    "value": "5093",
+    "date": "Sat, 18 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDky",
+    "value": "5092",
+    "date": "Wed, 15 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDkx",
+    "value": "5091",
+    "date": "Sun, 12 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDkw",
+    "value": "5090",
+    "date": "Sat, 11 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDg5",
+    "value": "5089",
+    "date": "Wed, 08 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDg4",
+    "value": "5088",
+    "date": "Sun, 05 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDg3",
+    "value": "5087",
+    "date": "Sat, 04 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDg2",
+    "value": "5086",
+    "date": "Wed, 01 Nov 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDg1",
+    "value": "5085",
+    "date": "Sun, 29 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDg0",
+    "value": "5084",
+    "date": "Sat, 28 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDgz",
+    "value": "5083",
+    "date": "Wed, 25 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDgy",
+    "value": "5082",
+    "date": "Sun, 22 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDgx",
+    "value": "5081",
+    "date": "Sat, 21 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDgw",
+    "value": "5080",
+    "date": "Wed, 18 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDc5",
+    "value": "5079",
+    "date": "Sun, 15 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDc4",
+    "value": "5078",
+    "date": "Sat, 14 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDc3",
+    "value": "5077",
+    "date": "Wed, 11 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDc2",
+    "value": "5076",
+    "date": "Sun, 08 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDc1",
+    "value": "5075",
+    "date": "Sat, 07 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDc0",
+    "value": "5074",
+    "date": "Wed, 04 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDcz",
+    "value": "5073",
+    "date": "Sun, 01 Oct 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDcy",
+    "value": "5072",
+    "date": "Sat, 30 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDcx",
+    "value": "5071",
+    "date": "Wed, 27 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDcw",
+    "value": "5070",
+    "date": "Sun, 24 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDY5",
+    "value": "5069",
+    "date": "Sat, 23 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDY4",
+    "value": "5068",
+    "date": "Wed, 20 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDY3",
+    "value": "5067",
+    "date": "Sun, 17 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDY2",
+    "value": "5066",
+    "date": "Sat, 16 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDY1",
+    "value": "5065",
+    "date": "Wed, 13 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDY0",
+    "value": "5064",
+    "date": "Sun, 10 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDYz",
+    "value": "5063",
+    "date": "Sat, 09 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDYy",
+    "value": "5062",
+    "date": "Wed, 06 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDYx",
+    "value": "5061",
+    "date": "Sun, 03 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDYw",
+    "value": "5060",
+    "date": "Sat, 02 Sep 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDU5",
+    "value": "5059",
+    "date": "Wed, 30 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDU4",
+    "value": "5058",
+    "date": "Sun, 27 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDU3",
+    "value": "5057",
+    "date": "Sat, 26 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDU2",
+    "value": "5056",
+    "date": "Wed, 23 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDU1",
+    "value": "5055",
+    "date": "Sun, 20 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDU0",
+    "value": "5054",
+    "date": "Sat, 19 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDUz",
+    "value": "5053",
+    "date": "Wed, 16 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDUy",
+    "value": "5052",
+    "date": "Sun, 13 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDUx",
+    "value": "5051",
+    "date": "Sat, 12 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDUw",
+    "value": "5050",
+    "date": "Wed, 09 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQ5",
+    "value": "5049",
+    "date": "Sun, 06 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQ4",
+    "value": "5048",
+    "date": "Sat, 05 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQ3",
+    "value": "5047",
+    "date": "Wed, 02 Aug 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQ2",
+    "value": "5046",
+    "date": "Sun, 30 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQ1",
+    "value": "5045",
+    "date": "Sat, 29 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQ0",
+    "value": "5044",
+    "date": "Wed, 26 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQz",
+    "value": "5043",
+    "date": "Sun, 23 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQy",
+    "value": "5042",
+    "date": "Sat, 22 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQx",
+    "value": "5041",
+    "date": "Wed, 19 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDQw",
+    "value": "5040",
+    "date": "Sun, 16 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDM5",
+    "value": "5039",
+    "date": "Sat, 15 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDM4",
+    "value": "5038",
+    "date": "Wed, 12 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDM3",
+    "value": "5037",
+    "date": "Sun, 09 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDM2",
+    "value": "5036",
+    "date": "Sat, 08 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDM1",
+    "value": "5035",
+    "date": "Wed, 05 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDM0",
+    "value": "5034",
+    "date": "Sun, 02 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDMz",
+    "value": "5033",
+    "date": "Sat, 01 Jul 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDMy",
+    "value": "5032",
+    "date": "Wed, 28 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDMx",
+    "value": "5031",
+    "date": "Sun, 25 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDMw",
+    "value": "5030",
+    "date": "Sat, 24 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDI5",
+    "value": "5029",
+    "date": "Wed, 21 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDI4",
+    "value": "5028",
+    "date": "Sun, 18 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDI3",
+    "value": "5027",
+    "date": "Sat, 17 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDI2",
+    "value": "5026",
+    "date": "Wed, 14 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDI1",
+    "value": "5025",
+    "date": "Sun, 11 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDI0",
+    "value": "5024",
+    "date": "Sat, 10 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDIz",
+    "value": "5023",
+    "date": "Wed, 07 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDIy",
+    "value": "5022",
+    "date": "Sun, 04 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDIx",
+    "value": "5021",
+    "date": "Sat, 03 Jun 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDIw",
+    "value": "5020",
+    "date": "Wed, 31 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDE5",
+    "value": "5019",
+    "date": "Sun, 28 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDE4",
+    "value": "5018",
+    "date": "Sat, 27 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDE3",
+    "value": "5017",
+    "date": "Wed, 24 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDE2",
+    "value": "5016",
+    "date": "Sun, 21 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDE1",
+    "value": "5015",
+    "date": "Sat, 20 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDE0",
+    "value": "5014",
+    "date": "Wed, 17 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDEz",
+    "value": "5013",
+    "date": "Sun, 14 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDEy",
+    "value": "5012",
+    "date": "Sat, 13 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDEx",
+    "value": "5011",
+    "date": "Wed, 10 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDEw",
+    "value": "5010",
+    "date": "Sun, 07 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDA5",
+    "value": "5009",
+    "date": "Sat, 06 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDA4",
+    "value": "5008",
+    "date": "Wed, 03 May 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDA3",
+    "value": "5007",
+    "date": "Sun, 30 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDA2",
+    "value": "5006",
+    "date": "Sat, 29 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDA1",
+    "value": "5005",
+    "date": "Wed, 26 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDA0",
+    "value": "5004",
+    "date": "Sun, 23 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDAz",
+    "value": "5003",
+    "date": "Sat, 22 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDAy",
+    "value": "5002",
+    "date": "Wed, 19 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDAx",
+    "value": "5001",
+    "date": "Sun, 16 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj01MDAw",
+    "value": "5000",
+    "date": "Sat, 15 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTk5",
+    "value": "4999",
+    "date": "Wed, 12 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTk4",
+    "value": "4998",
+    "date": "Sun, 09 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTk3",
+    "value": "4997",
+    "date": "Sat, 08 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTk2",
+    "value": "4996",
+    "date": "Wed, 05 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTk1",
+    "value": "4995",
+    "date": "Sun, 02 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTk0",
+    "value": "4994",
+    "date": "Sat, 01 Apr 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTkz",
+    "value": "4993",
+    "date": "Wed, 29 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTky",
+    "value": "4992",
+    "date": "Sun, 26 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTkx",
+    "value": "4991",
+    "date": "Sat, 25 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTkw",
+    "value": "4990",
+    "date": "Wed, 22 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTg5",
+    "value": "4989",
+    "date": "Sun, 19 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTg4",
+    "value": "4988",
+    "date": "Sat, 18 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTg3",
+    "value": "4987",
+    "date": "Wed, 15 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTg2",
+    "value": "4986",
+    "date": "Sun, 12 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTg1",
+    "value": "4985",
+    "date": "Sat, 11 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTg0",
+    "value": "4984",
+    "date": "Wed, 08 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTgz",
+    "value": "4983",
+    "date": "Sun, 05 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTgy",
+    "value": "4982",
+    "date": "Sat, 04 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTgx",
+    "value": "4981",
+    "date": "Wed, 01 Mar 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTgw",
+    "value": "4980",
+    "date": "Sun, 26 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTc5",
+    "value": "4979",
+    "date": "Sat, 25 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTc4",
+    "value": "4978",
+    "date": "Wed, 22 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTc3",
+    "value": "4977",
+    "date": "Sun, 19 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTc2",
+    "value": "4976",
+    "date": "Sat, 18 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTc1",
+    "value": "4975",
+    "date": "Wed, 15 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTc0",
+    "value": "4974",
+    "date": "Sun, 12 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTcz",
+    "value": "4973",
+    "date": "Sat, 11 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTcy",
+    "value": "4972",
+    "date": "Wed, 08 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTcx",
+    "value": "4971",
+    "date": "Sun, 05 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTcw",
+    "value": "4970",
+    "date": "Sat, 04 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTY5",
+    "value": "4969",
+    "date": "Wed, 01 Feb 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTY4",
+    "value": "4968",
+    "date": "Sun, 29 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTY3",
+    "value": "4967",
+    "date": "Sat, 28 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTY2",
+    "value": "4966",
+    "date": "Wed, 25 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTY1",
+    "value": "4965",
+    "date": "Sun, 22 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTY0",
+    "value": "4964",
+    "date": "Sat, 21 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTYz",
+    "value": "4963",
+    "date": "Wed, 18 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTYy",
+    "value": "4962",
+    "date": "Sun, 15 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTYx",
+    "value": "4961",
+    "date": "Sat, 14 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTYw",
+    "value": "4960",
+    "date": "Wed, 11 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTU5",
+    "value": "4959",
+    "date": "Sun, 08 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTU4",
+    "value": "4958",
+    "date": "Sat, 07 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTU3",
+    "value": "4957",
+    "date": "Wed, 04 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTU2",
+    "value": "4956",
+    "date": "Sun, 01 Jan 2023"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTU1",
+    "value": "4955",
+    "date": "Sat, 31 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTU0",
+    "value": "4954",
+    "date": "Wed, 28 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTUz",
+    "value": "4953",
+    "date": "Sun, 25 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTUy",
+    "value": "4952",
+    "date": "Sat, 24 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTUx",
+    "value": "4951",
+    "date": "Wed, 21 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTUw",
+    "value": "4950",
+    "date": "Sun, 18 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQ5",
+    "value": "4949",
+    "date": "Sat, 17 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQ4",
+    "value": "4948",
+    "date": "Wed, 14 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQ3",
+    "value": "4947",
+    "date": "Sun, 11 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQ2",
+    "value": "4946",
+    "date": "Sat, 10 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQ1",
+    "value": "4945",
+    "date": "Wed, 07 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQ0",
+    "value": "4944",
+    "date": "Sun, 04 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQz",
+    "value": "4943",
+    "date": "Sat, 03 Dec 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQy",
+    "value": "4942",
+    "date": "Wed, 30 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQx",
+    "value": "4941",
+    "date": "Sun, 27 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTQw",
+    "value": "4940",
+    "date": "Sat, 26 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTM5",
+    "value": "4939",
+    "date": "Wed, 23 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTM4",
+    "value": "4938",
+    "date": "Sun, 20 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTM3",
+    "value": "4937",
+    "date": "Sat, 19 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTM2",
+    "value": "4936",
+    "date": "Wed, 16 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTM1",
+    "value": "4935",
+    "date": "Sun, 13 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTM0",
+    "value": "4934",
+    "date": "Sat, 12 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTMz",
+    "value": "4933",
+    "date": "Wed, 09 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTMy",
+    "value": "4932",
+    "date": "Sun, 06 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTMx",
+    "value": "4931",
+    "date": "Sat, 05 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTMw",
+    "value": "4930",
+    "date": "Wed, 02 Nov 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTI5",
+    "value": "4929",
+    "date": "Sun, 30 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTI4",
+    "value": "4928",
+    "date": "Sat, 29 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTI3",
+    "value": "4927",
+    "date": "Wed, 26 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTI2",
+    "value": "4926",
+    "date": "Sun, 23 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTI1",
+    "value": "4925",
+    "date": "Sat, 22 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTI0",
+    "value": "4924",
+    "date": "Wed, 19 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTIz",
+    "value": "4923",
+    "date": "Sun, 16 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTIy",
+    "value": "4922",
+    "date": "Sat, 15 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTIx",
+    "value": "4921",
+    "date": "Wed, 12 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTIw",
+    "value": "4920",
+    "date": "Sun, 09 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTE5",
+    "value": "4919",
+    "date": "Sat, 08 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTE4",
+    "value": "4918",
+    "date": "Wed, 05 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTE3",
+    "value": "4917",
+    "date": "Sun, 02 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTE2",
+    "value": "4916",
+    "date": "Sat, 01 Oct 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTE1",
+    "value": "4915",
+    "date": "Wed, 28 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTE0",
+    "value": "4914",
+    "date": "Sun, 25 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTEz",
+    "value": "4913",
+    "date": "Sat, 24 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTEy",
+    "value": "4912",
+    "date": "Wed, 21 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTEx",
+    "value": "4911",
+    "date": "Sun, 18 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTEw",
+    "value": "4910",
+    "date": "Sat, 17 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTA5",
+    "value": "4909",
+    "date": "Wed, 14 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTA4",
+    "value": "4908",
+    "date": "Sun, 11 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTA3",
+    "value": "4907",
+    "date": "Sat, 10 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTA2",
+    "value": "4906",
+    "date": "Wed, 07 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTA1",
+    "value": "4905",
+    "date": "Sun, 04 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTA0",
+    "value": "4904",
+    "date": "Sat, 03 Sep 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTAz",
+    "value": "4903",
+    "date": "Wed, 31 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTAy",
+    "value": "4902",
+    "date": "Sun, 28 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTAx",
+    "value": "4901",
+    "date": "Sat, 27 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00OTAw",
+    "value": "4900",
+    "date": "Wed, 24 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODk5",
+    "value": "4899",
+    "date": "Sun, 21 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODk4",
+    "value": "4898",
+    "date": "Sat, 20 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODk3",
+    "value": "4897",
+    "date": "Wed, 17 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODk2",
+    "value": "4896",
+    "date": "Sun, 14 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODk1",
+    "value": "4895",
+    "date": "Sat, 13 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODk0",
+    "value": "4894",
+    "date": "Wed, 10 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODkz",
+    "value": "4893",
+    "date": "Sun, 07 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODky",
+    "value": "4892",
+    "date": "Sat, 06 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODkx",
+    "value": "4891",
+    "date": "Wed, 03 Aug 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODkw",
+    "value": "4890",
+    "date": "Sun, 31 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODg5",
+    "value": "4889",
+    "date": "Sat, 30 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODg4",
+    "value": "4888",
+    "date": "Wed, 27 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODg3",
+    "value": "4887",
+    "date": "Sun, 24 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODg2",
+    "value": "4886",
+    "date": "Sat, 23 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODg1",
+    "value": "4885",
+    "date": "Wed, 20 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODg0",
+    "value": "4884",
+    "date": "Sun, 17 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODgz",
+    "value": "4883",
+    "date": "Sat, 16 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODgy",
+    "value": "4882",
+    "date": "Wed, 13 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODgx",
+    "value": "4881",
+    "date": "Sun, 10 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODgw",
+    "value": "4880",
+    "date": "Sat, 09 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODc5",
+    "value": "4879",
+    "date": "Wed, 06 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODc4",
+    "value": "4878",
+    "date": "Sun, 03 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODc3",
+    "value": "4877",
+    "date": "Sat, 02 Jul 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODc2",
+    "value": "4876",
+    "date": "Wed, 29 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODc1",
+    "value": "4875",
+    "date": "Sun, 26 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODc0",
+    "value": "4874",
+    "date": "Sat, 25 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODcz",
+    "value": "4873",
+    "date": "Wed, 22 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODcy",
+    "value": "4872",
+    "date": "Sun, 19 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODcx",
+    "value": "4871",
+    "date": "Sat, 18 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODcw",
+    "value": "4870",
+    "date": "Wed, 15 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODY5",
+    "value": "4869",
+    "date": "Sun, 12 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODY4",
+    "value": "4868",
+    "date": "Sat, 11 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODY3",
+    "value": "4867",
+    "date": "Wed, 08 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODY2",
+    "value": "4866",
+    "date": "Sun, 05 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODY1",
+    "value": "4865",
+    "date": "Sat, 04 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODY0",
+    "value": "4864",
+    "date": "Wed, 01 Jun 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODYz",
+    "value": "4863",
+    "date": "Sun, 29 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODYy",
+    "value": "4862",
+    "date": "Sat, 28 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODYx",
+    "value": "4861",
+    "date": "Wed, 25 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODYw",
+    "value": "4860",
+    "date": "Sun, 22 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODU5",
+    "value": "4859",
+    "date": "Sat, 21 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODU4",
+    "value": "4858",
+    "date": "Wed, 18 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODU3",
+    "value": "4857",
+    "date": "Sun, 15 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODU2",
+    "value": "4856",
+    "date": "Sat, 14 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODU1",
+    "value": "4855",
+    "date": "Wed, 11 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODU0",
+    "value": "4854",
+    "date": "Sun, 08 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODUz",
+    "value": "4853",
+    "date": "Sat, 07 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODUy",
+    "value": "4852",
+    "date": "Wed, 04 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODUx",
+    "value": "4851",
+    "date": "Sun, 01 May 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODUw",
+    "value": "4850",
+    "date": "Sat, 30 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQ5",
+    "value": "4849",
+    "date": "Wed, 27 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQ4",
+    "value": "4848",
+    "date": "Sun, 24 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQ3",
+    "value": "4847",
+    "date": "Sat, 23 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQ2",
+    "value": "4846",
+    "date": "Wed, 20 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQ1",
+    "value": "4845",
+    "date": "Sun, 17 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQ0",
+    "value": "4844",
+    "date": "Sat, 16 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQz",
+    "value": "4843",
+    "date": "Wed, 13 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQy",
+    "value": "4842",
+    "date": "Sun, 10 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQx",
+    "value": "4841",
+    "date": "Sat, 09 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODQw",
+    "value": "4840",
+    "date": "Wed, 06 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODM5",
+    "value": "4839",
+    "date": "Sun, 03 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODM4",
+    "value": "4838",
+    "date": "Sat, 02 Apr 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODM3",
+    "value": "4837",
+    "date": "Wed, 30 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODM2",
+    "value": "4836",
+    "date": "Sun, 27 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODM1",
+    "value": "4835",
+    "date": "Sat, 26 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODM0",
+    "value": "4834",
+    "date": "Wed, 23 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODMz",
+    "value": "4833",
+    "date": "Sun, 20 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODMy",
+    "value": "4832",
+    "date": "Sat, 19 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODMx",
+    "value": "4831",
+    "date": "Wed, 16 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODMw",
+    "value": "4830",
+    "date": "Sun, 13 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODI5",
+    "value": "4829",
+    "date": "Sat, 12 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODI4",
+    "value": "4828",
+    "date": "Wed, 09 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODI3",
+    "value": "4827",
+    "date": "Sun, 06 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODI2",
+    "value": "4826",
+    "date": "Sat, 05 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODI1",
+    "value": "4825",
+    "date": "Wed, 02 Mar 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODI0",
+    "value": "4824",
+    "date": "Sun, 27 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODIz",
+    "value": "4823",
+    "date": "Sat, 26 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODIy",
+    "value": "4822",
+    "date": "Wed, 23 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODIx",
+    "value": "4821",
+    "date": "Sun, 20 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODIw",
+    "value": "4820",
+    "date": "Sat, 19 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODE5",
+    "value": "4819",
+    "date": "Wed, 16 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODE4",
+    "value": "4818",
+    "date": "Sun, 13 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODE3",
+    "value": "4817",
+    "date": "Sat, 12 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODE2",
+    "value": "4816",
+    "date": "Wed, 09 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODE1",
+    "value": "4815",
+    "date": "Sun, 06 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODE0",
+    "value": "4814",
+    "date": "Sat, 05 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODEz",
+    "value": "4813",
+    "date": "Wed, 02 Feb 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODEy",
+    "value": "4812",
+    "date": "Sun, 30 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODEx",
+    "value": "4811",
+    "date": "Sat, 29 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODEw",
+    "value": "4810",
+    "date": "Wed, 26 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODA5",
+    "value": "4809",
+    "date": "Sun, 23 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODA4",
+    "value": "4808",
+    "date": "Sat, 22 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODA3",
+    "value": "4807",
+    "date": "Wed, 19 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODA2",
+    "value": "4806",
+    "date": "Sun, 16 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODA1",
+    "value": "4805",
+    "date": "Sat, 15 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODA0",
+    "value": "4804",
+    "date": "Wed, 12 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODAz",
+    "value": "4803",
+    "date": "Sun, 09 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODAy",
+    "value": "4802",
+    "date": "Sat, 08 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODAx",
+    "value": "4801",
+    "date": "Wed, 05 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00ODAw",
+    "value": "4800",
+    "date": "Sun, 02 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzk5",
+    "value": "4799",
+    "date": "Sat, 01 Jan 2022"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzk4",
+    "value": "4798",
+    "date": "Wed, 29 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzk3",
+    "value": "4797",
+    "date": "Sun, 26 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzk2",
+    "value": "4796",
+    "date": "Sat, 25 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzk1",
+    "value": "4795",
+    "date": "Wed, 22 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzk0",
+    "value": "4794",
+    "date": "Sun, 19 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzkz",
+    "value": "4793",
+    "date": "Sat, 18 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzky",
+    "value": "4792",
+    "date": "Wed, 15 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzkx",
+    "value": "4791",
+    "date": "Sun, 12 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzkw",
+    "value": "4790",
+    "date": "Sat, 11 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzg5",
+    "value": "4789",
+    "date": "Wed, 08 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzg4",
+    "value": "4788",
+    "date": "Sun, 05 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzg3",
+    "value": "4787",
+    "date": "Sat, 04 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzg2",
+    "value": "4786",
+    "date": "Wed, 01 Dec 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzg1",
+    "value": "4785",
+    "date": "Sun, 28 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzg0",
+    "value": "4784",
+    "date": "Sat, 27 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzgz",
+    "value": "4783",
+    "date": "Wed, 24 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzgy",
+    "value": "4782",
+    "date": "Sun, 21 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzgx",
+    "value": "4781",
+    "date": "Sat, 20 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzgw",
+    "value": "4780",
+    "date": "Wed, 17 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzc5",
+    "value": "4779",
+    "date": "Sun, 14 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzc4",
+    "value": "4778",
+    "date": "Sat, 13 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzc3",
+    "value": "4777",
+    "date": "Wed, 10 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzc2",
+    "value": "4776",
+    "date": "Sun, 07 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzc1",
+    "value": "4775",
+    "date": "Sat, 06 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzc0",
+    "value": "4774",
+    "date": "Wed, 03 Nov 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzcz",
+    "value": "4773",
+    "date": "Sun, 31 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzcy",
+    "value": "4772",
+    "date": "Sat, 30 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzcx",
+    "value": "4771",
+    "date": "Wed, 27 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00Nzcw",
+    "value": "4770",
+    "date": "Sun, 24 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzY5",
+    "value": "4769",
+    "date": "Sat, 23 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzY4",
+    "value": "4768",
+    "date": "Wed, 20 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzY3",
+    "value": "4767",
+    "date": "Sun, 17 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzY2",
+    "value": "4766",
+    "date": "Sat, 16 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzY1",
+    "value": "4765",
+    "date": "Wed, 13 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzY0",
+    "value": "4764",
+    "date": "Sun, 10 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzYz",
+    "value": "4763",
+    "date": "Sat, 09 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzYy",
+    "value": "4762",
+    "date": "Wed, 06 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzYx",
+    "value": "4761",
+    "date": "Sun, 03 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzYw",
+    "value": "4760",
+    "date": "Sat, 02 Oct 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzU5",
+    "value": "4759",
+    "date": "Wed, 29 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzU4",
+    "value": "4758",
+    "date": "Sun, 26 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzU3",
+    "value": "4757",
+    "date": "Sat, 25 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzU2",
+    "value": "4756",
+    "date": "Wed, 22 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzU1",
+    "value": "4755",
+    "date": "Sun, 19 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzU0",
+    "value": "4754",
+    "date": "Sat, 18 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzUz",
+    "value": "4753",
+    "date": "Wed, 15 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzUy",
+    "value": "4752",
+    "date": "Sun, 12 Sep 2021"
+  },
+  {
+    "querystring": "sppl=RHJhd051bWJlcj00NzUx",
+    "value": "4751",
+    "date": "Sat, 11 Sep 2021"
+  }
+]

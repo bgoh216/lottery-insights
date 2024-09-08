@@ -7,10 +7,11 @@ import dotenv from "dotenv";
 
 import { __dirname } from './constants/helper.js';
 import express, { Express, Request, Response } from "express";
-import { FourDResult, TotoResult, WinningShare } from './models/Toto.js';
-import { getData, initializeTotoDatabase, saveTotoToDatabase } from './utils/database/helper.js';
-import { totoRoutes } from './controllers/toto.js';
+import { TotoResult, WinningShare } from './models/Toto.js';
+import { getData, initialize4dDatabase, initializeTotoDatabase, save4dToDatabase, saveTotoToDatabase } from './utils/database/helper.js';
+import { totoRoutes } from './controllers/toto/get-top-numbers.js';
 import { readFileToString } from './utils/helper-functions/sql-helpers.js';
+import { FourDResult } from './models/4d.js';
 
 interface DrawInfo {
     querystring: string;
@@ -187,35 +188,45 @@ async function scrapeToto(url: string): Promise<TotoResult> {
 }
 
 // Scraping function for 4D
-async function scrapeFourD(): Promise<FourDResult> {
-    const url = 'https://www.singaporepools.com.sg/en/product/Pages/4d_results.aspx';
+async function scrape4D(url: string): Promise<FourDResult> {
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
-    const tablesWrap = $('.tables-wrap').first();
 
-    const result: FourDResult = {
-        drawDate: '',
+    const fourDResult: FourDResult = {
         drawNo: '',
-        topPrizes: [],
+        date: '',
+        firstNumber: '',
+        secondNumber: '',
+        thirdNumber: '',
+        consolationNumbers: [],
+        starterNumbers: []
     };
 
-    result.drawDate = tablesWrap.find('.drawDate').text().trim();
-    result.drawNo = tablesWrap.find('.drawNumber').text().trim().replace('Draw No. ', '');
+    // Extract draw number and date
+    const drawInfo = $('.drawNumber').text().trim();
+    fourDResult.drawNo = drawInfo.split('Draw No. ')[1];
 
-    tablesWrap.find('.table:first-child tbody tr').each((i, el) => {
-        const columns = $(el).find('td');
-        result.topPrizes.push({
-            prize: $(columns[0]).text().trim(),
-            number: $(columns[1]).text().trim(),
-            amount: $(columns[2]).text().trim()
-        });
+    const dateInfo = $('.drawDate').text().trim();
+    fourDResult.date = dateInfo;
+
+    // Extract winning numbers
+    fourDResult.firstNumber = $('.tdFirstPrize').text().trim();
+    fourDResult.secondNumber = $('.tdSecondPrize').text().trim();
+    fourDResult.thirdNumber = $('.tdThirdPrize').text().trim();
+
+    // console.log($('.tbodyStarterPrizes td'));
+    // Extract starter numbers
+    $('.tbodyStarterPrizes td').each((i, elem) => {
+        fourDResult.starterNumbers.push($(elem).text().trim());
     });
 
-    result.startingNumber = tablesWrap.find('.table:nth-child(2) .startingNumber').text().trim();
-    result.endingNumber = tablesWrap.find('.table:nth-child(2) .endingNumber').text().trim();
+    // Extract consolation numbers
+    $('.tbodyConsolationPrizes td').each((i, elem) => {
+        fourDResult.consolationNumbers.push($(elem).text().trim());
+    });
 
-    //   console.log(result);
-    return result;
+    console.log(fourDResult);
+    return fourDResult;
 }
 
 function isToto(obj: any): obj is TotoResult {
@@ -223,7 +234,7 @@ function isToto(obj: any): obj is TotoResult {
 }
 
 function is4D(obj: any): obj is FourDResult {
-    return typeof obj === 'object' && obj !== null && 'drawNo' in obj && 'topPrizes' in obj;
+    return typeof obj === 'object' && obj !== null && 'drawNo' in obj && 'consolationNumbers' in obj;
 }
 
 // Function to save data to a JSON file
@@ -267,15 +278,48 @@ async function getDrawList(): Promise<DrawInfo[]> {
     }
 }
 
-// Main function to run the ETL process
-async function runETL(): Promise<void> {
-    const baseUrl = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
-    await initializeTotoDatabase();
-
-    const drawList = await getDrawList();
-    console.log(`Found ${drawList.length} draws`);
+async function getAll4DList(): Promise<DrawInfo[]> {
+    console.log('Fetching 4D draw list...');
+    const browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
 
     try {
+        await page.goto('https://www.singaporepools.com.sg/en/product/Pages/4d_results.aspx', { waitUntil: 'networkidle0' });
+
+        // Wait for the dropdown to be present
+        await page.waitForSelector('.form-control.selectDrawList', { timeout: 10000 });
+
+        // Click the dropdown to populate it
+        await page.click('.form-control.selectDrawList');
+
+        // Extract the draw list
+        const drawList = await page.evaluate(() => {
+            const selectElement = document.querySelector('.form-control.selectDrawList');
+            if (!selectElement) return [];
+
+            const options = Array.from(selectElement.querySelectorAll('option'));
+            return options.map(option => ({
+                querystring: option.getAttribute('querystring') || '',
+                value: option.getAttribute('value') || '',
+                date: option.textContent?.trim() || ''
+            }));
+        });
+
+        return drawList;
+    } finally {
+        await browser.close();
+    }
+}
+
+// Main function to run the ETL process
+async function runETL(): Promise<void> {
+    await initializeTotoDatabase();
+    await initialize4dDatabase();
+
+    try {
+        const baseUrl = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
+        const drawList = await getDrawList();
+        console.log(`Found ${drawList.length} draws`);
         for (const draw of drawList) {
             const url = `${baseUrl}?${draw.querystring}`;
             console.log(`Crawling: ${url}...`);
@@ -286,10 +330,24 @@ async function runETL(): Promise<void> {
 
             console.log(`TOTO data saved for draw ${totoData.drawNo}`);
         }
+    } catch (error) {
+        console.error('Error in ETL process:', error);
+    }
 
-        // const fourDData = await scrapeFourD();
-        // await saveData(fourDData, `4d_${fourDData.drawNumber}.json`);
-        // console.log(`4D data saved for draw ${fourDData.drawNumber}`);
+    try {
+        const baseUrl = 'https://www.singaporepools.com.sg/en/product/Pages/4d_results.aspx';
+        const all4dDraws = await getAll4DList();
+        // await fs.writeFile('allpaths', JSON.stringify(all4dDraws, null, 2));
+        console.log(`Found ${all4dDraws.length} 4D draws`);
+        for (const draw of all4dDraws) {
+            const url = `${baseUrl}?${draw.querystring}`;
+            console.log(`Crawling: ${url}...`);
+
+            const fourDData = await scrape4D(url);
+            await saveDataToFile(fourDData, `4d_${fourDData.drawNo}.json`);
+            await save4dToDatabase(fourDData);
+            console.log(`4D data saved for draw ${fourDData.drawNo}`);
+        }
     } catch (error) {
         console.error('Error in ETL process:', error);
     }
@@ -302,26 +360,26 @@ async function runETL(): Promise<void> {
 // });
 
 // Run the ETL process immediately (for testing)
-// runETL();
+runETL();
 
-console.log('ETL pipeline started. Waiting for scheduled runs...');
-dotenv.config();
+// console.log('ETL pipeline started. Waiting for scheduled runs...');
+// dotenv.config();
 
-const app: Express = express();
-const port = process.env.PORT || 3000;
+// const app: Express = express();
+// const port = process.env.PORT || 3000;
 
 
-app.use(express.json());
-app.use('/toto', totoRoutes);
+// app.use(express.json());
+// app.use('/toto', totoRoutes);
 
-app.get("/", (req: Request, res: Response) => {
-    res.send("Welcome");
-});
+// app.get("/", (req: Request, res: Response) => {
+//     res.send("Welcome");
+// });
 
-app.get("/", (req: Request, res: Response) => {
-    res.send("Welcome");
-});
+// app.get("/", (req: Request, res: Response) => {
+//     res.send("Welcome");
+// });
 
-app.listen(port, () => {
-    console.log(`[server]: Server is running at http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`[server]: Server is running at http://localhost:${port}`);
+// });

@@ -6,6 +6,10 @@ import { createWinningGroupTable } from './sql-queries/create/create-winning-gro
 import { createAddressTable } from './sql-queries/create/create-address-table.js';
 import { TotoResult } from '../../models/Toto.js';
 import { convertToDollars, convertToSQLDate, escapeSingleQuotes, extractAddressAndType } from '../helper-functions/sql-helpers.js';
+import { FourDResult } from '../../models/4d.js';
+import { create4dDrawTable } from './sql-queries/create/create-4d-draw-table.js';
+import { create4dConsolationTable } from './sql-queries/create/create-4d-consolation-table.js';
+import { create4dStarterTable } from './sql-queries/create/create-4d-starter-table.js';
 
 export async function initializeTotoDatabase() {
     try {
@@ -26,6 +30,32 @@ export async function initializeTotoDatabase() {
         console.log(`Successfully created 'WinningGroup' table`);
         await client.query(createAddressTable);
         console.log(`Successfully created 'Address' table`);
+
+        await client.end();
+    } catch (error) {
+        throw error;
+    }
+}
+
+export async function initialize4dDatabase() {
+    try {
+        const { Client } = pg;
+        const client = new Client({
+            user: 'postgres',
+            password: 'password',
+            host: 'localhost',
+            port: 5432,
+            database: '4D',
+        });
+        await client.connect();
+        console.log(`Successfully connected to ${client.database} database`);
+
+        await client.query(create4dDrawTable);
+        console.log(`Successfully created '4D Draw' table`);
+        await client.query(create4dConsolationTable);
+        console.log(`Successfully created 'Consolation prizes' table`);
+        await client.query(create4dStarterTable);
+        console.log(`Successfully created 'Starter prizes' table`);
 
         await client.end();
     } catch (error) {
@@ -106,6 +136,83 @@ export async function saveTotoToDatabase(totoData: TotoResult): Promise<void> {
         await client.end();
     }
 }
+
+
+export async function save4dToDatabase(result: FourDResult): Promise<void> {
+    const { Client } = pg;
+    const client = new Client({
+        user: 'postgres',
+        password: 'password',
+        host: 'localhost',
+        port: 5432,
+        database: '4D',
+    });
+    await client.connect();
+    console.log(`Successfully connected to ${client.database} database.`);
+
+    try {
+        const insert4DDrawTableQuery: string = `
+            INSERT INTO public."4D_Draw" (draw_no, date, first_prize, second_prize, third_prize)
+            VALUES (
+                ${result.drawNo}, 
+                '${convertToSQLDate(result.date)}',
+                '${result.firstNumber}',
+                '${result.secondNumber}',
+                '${result.thirdNumber}');
+        `;
+        await client.query(insert4DDrawTableQuery);
+        console.log(`4D Draw table of draw: ${result.drawNo} successfully inserted`);
+
+        console.log(`Inserting starter prizes for draw: ${result.drawNo}...`)
+        for (const number of result.starterNumbers) {
+            try {
+                const insertStarterNumbersQuery: string = `
+                    INSERT INTO public."4D_Starter" (starter_prize_id , draw_no, prize)
+                    VALUES (
+                        '${uuidv4()}',
+                        ${result.drawNo},
+                        '${number}');
+                `;
+
+                await client.query(insertStarterNumbersQuery);
+            } catch (error) {
+                console.error(`Error inserting consolation number ${number}:`, error);
+                // Handle the error as needed (e.g., log it, skip to next iteration, etc.)
+            }
+        }
+
+        console.log(`Inserting consolation prizes for draw: ${result.drawNo}...`)
+        for (const number of result.consolationNumbers) {
+            try {
+                const insertConsolationNumbersQuery: string = `
+                    INSERT INTO public."4D_Consolation" (consolation_prize_id, draw_no, prize)
+                    VALUES (
+                        '${uuidv4()}',
+                        ${result.drawNo},
+                        '${number}');
+                `;
+
+                await client.query(insertConsolationNumbersQuery);
+            } catch (error) {
+                console.error(`Error inserting consolation number ${number}:`, error);
+                // Handle the error as needed (e.g., log it, skip to next iteration, etc.)
+            }
+        }
+
+        console.log(`Prizes successfully inserted`);
+    } catch (error: any) {
+        if (error.code == '23505') {
+            console.info(`Draw number ${result.drawNo} have been inserted. Skipping...`);
+            return;
+        }
+        console.log(error.error);
+        throw error;
+    } finally {
+        await client.end();
+    }
+}
+
+
 
 export async function getData(sqlQuery: string): Promise<any> {
     const { Client } = pg;

@@ -1,6 +1,11 @@
 import { Router } from 'express';
-import { getData } from '../utils/database/helper.js';
-import { readFileToString } from '../utils/helper-functions/sql-helpers.js';
+import { getData } from '../../utils/database/helper.js';
+import { readFileToString } from '../../utils/helper-functions/sql-helpers.js';
+import path from 'path';
+import { promises as fs } from 'fs';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export const totoRoutes = Router();
 
@@ -131,3 +136,26 @@ totoRoutes.get('/top-numbers', async (req, res) => {
     res.send(htmlContent);
 });
 
+totoRoutes.get('/top-address', async (req, res) => {
+    const data: any = await getData(await readFileToString('easter-egg/winning-store-locations.sql'));
+
+    try {
+        // Read the HTML template
+        const htmlTemplate = await readFileToString('src/templates/lottery-results-template.html')
+
+        // Assume you have your data in a variable called 'data'
+        const dataRows: any = data.rows;
+
+        // Convert data to a JSON string
+        const dataString = JSON.stringify(dataRows);
+
+        // Replace the placeholder in the HTML with the actual data
+        const htmlWithData = htmlTemplate.replace('DATA_PLACEHOLDER', dataString);
+
+        // Send the HTML response
+        res.send(htmlWithData);
+    } catch (error) {
+        console.error('Error rendering lottery results:', error);
+        res.status(500).send('An error occurred while rendering the lottery results.');
+    }
+});

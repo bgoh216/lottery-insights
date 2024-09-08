@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Lottery Results Dashboard</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.6;
+            color: #5a5a5a;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            border: 3px solid #fca5a5;
+        }
+
+        h1 {
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            background-color: #fff0f0;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .filter-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ff9999;
+        }
+
+        input[type="number"] {
+            width: 120px;
+            padding: 8px;
+            border: 2px solid #ffcccc;
+            border-radius: 10px;
+            font-size: 1em;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #ff9999;
+            box-shadow: 0 0 10px #ffcccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px dotted #ffcccc;
+        }
+
+        th {
+            background-color: #ff9999;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px 10px 0 0;
+            transition: background-color 0.3s ease;
+        }
+
+        th:hover {
+            background-color: #ff7777;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fff5f5;
+        }
+
+        tr:hover {
+            background-color: #ffe6e6;
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+
+        .numeric {
+            text-align: right;
+        }
+
+        .sort-icon::after {
+            content: '\2665';
+            margin-left: 5px;
+            font-size: 0.8em;
+        }
+
+        .sort-icon.descending::after {
+            content: '\2661';
+        }
+
+        /* Cute loading animation */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .loading span {
+            width: 20px;
+            height: 20px;
+            background-color: #ff9999;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+            animation: bounce 0.6s infinite alternate;
+        }
+
+        .loading span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎀 Cute Lottery Results 🎀</h1>
+        <div class="filters">
+            <div class="filter-group">
+                <label for="min-win-count">Min Win Count:</label>
+                <input type="number" id="min-win-count" min="0">
+            </div>
+            <div class="filter-group">
+                <label for="min-avg-prize">Min Avg Prize:</label>
+                <input type="number" id="min-avg-prize" min="0">
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Address</th>
+                    <th class="numeric sortable" data-sort="win_count">Win Count <span class="sort-icon"></span></th>
+                    <th class="numeric sortable" data-sort="avg_prize">Average Prize <span class="sort-icon"></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+                <!-- Data rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script>
+        // Data will be injected here
+        const data = DATA_PLACEHOLDER;
+
+        let sortColumn = null;
+        let sortDirection = 'ascending';
+
+        function renderTable(filteredData) {
+            const tbody = document.getElementById('results-body');
+            tbody.innerHTML = '';
+            filteredData.forEach(row => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${row.address}</td>
+                        <td class="numeric">${row.win_count}</td>
+                        <td class="numeric">${parseFloat(row.avg_prize).toLocaleString('en-US', { maximumFractionDigits: 2 })}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        function filterAndSortData() {
+            const minWinCount = parseInt(document.getElementById('min-win-count').value) || 0;
+            const minAvgPrize = parseFloat(document.getElementById('min-avg-prize').value) || 0;
+
+            let filteredData = data.filter(row =>
+                parseInt(row.win_count) >= minWinCount &&
+                parseFloat(row.avg_prize) >= minAvgPrize
+            );
+
+            if (sortColumn) {
+                filteredData.sort((a, b) => {
+                    let valueA = sortColumn === 'win_count' ? parseInt(a[sortColumn]) : parseFloat(a[sortColumn]);
+                    let valueB = sortColumn === 'win_count' ? parseInt(b[sortColumn]) : parseFloat(b[sortColumn]);
+                    return sortDirection === 'ascending' ? valueA - valueB : valueB - valueA;
+                });
+            }
+
+            renderTable(filteredData);
+        }
+
+        function handleSort(column) {
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'ascending' ? 'descending' : 'ascending';
+            } else {
+                sortColumn = column;
+                sortDirection = 'ascending';
+            }
+
+            // Update sort icons
+            document.querySelectorAll('.sortable').forEach(th => {
+                th.querySelector('.sort-icon').className = 'sort-icon';
+            });
+            const currentSortIcon = document.querySelector(`th[data-sort="${column}"] .sort-icon`);
+            currentSortIcon.classList.add(sortDirection);
+
+            filterAndSortData();
+        }
+
+        document.getElementById('min-win-count').addEventListener('input', filterAndSortData);
+        document.getElementById('min-avg-prize').addEventListener('input', filterAndSortData);
+
+        document.querySelectorAll('.sortable').forEach(th => {
+            th.addEventListener('click', () => handleSort(th.dataset.sort));
+        });
+
+        // Initial render
+        filterAndSortData();
+
+        // Hide loading animation after initial render
+        document.querySelector('.loading').style.display = 'none';
+    </script>
+</body>
+
+</html>

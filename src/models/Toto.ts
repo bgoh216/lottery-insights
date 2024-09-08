@@ -15,25 +15,12 @@ export type WinningShares = {
 }
 
 export interface TotoResult {
-    date: string;
     drawNo: string;
+    date: string;
     winningNumbers: string[];
     additionalNumber: string;
     group1Prize: string;
     winningShares: { [groupNumber: string]: WinningShare };
 }
-
-export interface FourDResult {
-    drawDate: string;
-    drawNo: string;
-    topPrizes: {
-        prize: string;
-        number: string;
-        amount: string;
-    }[];
-    startingNumber?: string;
-    endingNumber?: string;
-}
-
 // iTOTO / 28 is the amount
 // https://online.singaporepools.com/en/lottery/comparison-between-toto-itoto
