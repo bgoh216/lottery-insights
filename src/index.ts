@@ -7,17 +7,12 @@ import dotenv from "dotenv";
 
 import { __dirname } from './constants/helper.js';
 import express, { Express, Request, Response } from "express";
-import { TotoResult, WinningShare } from './models/Toto.js';
+import { Toto, TotoResult, WinningShare } from './models/Toto.js';
 import { getData, initialize4dDatabase, initializeTotoDatabase, save4dToDatabase, saveTotoToDatabase } from './utils/database/helper.js';
 import { totoRoutes } from './controllers/toto/get-top-numbers.js';
 import { readFileToString } from './utils/helper-functions/sql-helpers.js';
-import { FourDResult } from './models/4d.js';
-
-interface DrawInfo {
-    querystring: string;
-    value: string;
-    date: string;
-}
+import { FourD, FourDResult } from './models/4d.js';
+import { DrawInfo } from './constants/types/drawInfo.js';
 
 function processITOTOString(input: string, processedSentences: string[]) {
     // Split the input string by "iTOTO - System" to separate different systems
@@ -313,40 +308,46 @@ async function getAll4DList(): Promise<DrawInfo[]> {
 
 // Main function to run the ETL process
 async function runETL(): Promise<void> {
+
     await initializeTotoDatabase();
     await initialize4dDatabase();
 
     try {
-        const baseUrl = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
-        const drawList = await getDrawList();
-        console.log(`Found ${drawList.length} draws`);
-        for (const draw of drawList) {
-            const url = `${baseUrl}?${draw.querystring}`;
+        const drawInfos: DrawInfo[] = await instanceToto.getAllDrawList();
+        console.log(`Found ${drawInfos.length} draws`);
+
+        for (const draw of drawInfos) {
+            const url = `${instanceToto.BASE_URL}?${draw.querystring}`;
             console.log(`Crawling: ${url}...`);
 
-            const totoData = await scrapeToto(url);
-            await saveDataToFile(totoData, `toto_${totoData.drawNo}.json`);
-            await saveTotoToDatabase(totoData);
+            const data = await instanceToto.scrapeData(url);
 
-            console.log(`TOTO data saved for draw ${totoData.drawNo}`);
+
+            await saveDataToFile(data, `toto_${data.drawNo}.json`);
+            await instanceToto.saveResultsToDatabase(data);
+
+            console.log(`Data saved for draw ${data.drawNo}`);
         }
     } catch (error) {
         console.error('Error in ETL process:', error);
     }
 
+    // await fs.writeFile('allpaths', JSON.stringify(all4dDraws, null, 2));
     try {
-        const baseUrl = 'https://www.singaporepools.com.sg/en/product/Pages/4d_results.aspx';
-        const all4dDraws = await getAll4DList();
-        // await fs.writeFile('allpaths', JSON.stringify(all4dDraws, null, 2));
-        console.log(`Found ${all4dDraws.length} 4D draws`);
-        for (const draw of all4dDraws) {
-            const url = `${baseUrl}?${draw.querystring}`;
+        const drawInfos: DrawInfo[] = await instance4D.getAllDrawList();
+        console.log(`Found ${drawInfos.length} draws`);
+
+        for (const draw of drawInfos) {
+            const url = `${instance4D.BASE_URL}?${draw.querystring}`;
             console.log(`Crawling: ${url}...`);
 
-            const fourDData = await scrape4D(url);
-            await saveDataToFile(fourDData, `4d_${fourDData.drawNo}.json`);
-            await save4dToDatabase(fourDData);
-            console.log(`4D data saved for draw ${fourDData.drawNo}`);
+            const data = await instance4D.scrapeData(url);
+
+
+            await saveDataToFile(data, `4d_${data.drawNo}.json`);
+            await instance4D.saveResultsToDatabase(data);
+
+            console.log(`Data saved for draw ${data.drawNo}`);
         }
     } catch (error) {
         console.error('Error in ETL process:', error);
@@ -358,6 +359,9 @@ async function runETL(): Promise<void> {
 //   console.log('Running scheduled ETL process');
 //   runETL();
 // });
+
+const instance4D = FourD.instance;
+const instanceToto = Toto.instance;
 
 // Run the ETL process immediately (for testing)
 runETL();
