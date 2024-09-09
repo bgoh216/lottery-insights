@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer';
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import dotenv from "dotenv";
-import pg from 'pg';
+import pg, { Pool } from 'pg';
 import { v4 as uuidv4 } from 'uuid';
 import { DrawInfo } from '../constants/types/drawInfo.js';
 import { convertToDollars, convertToSQLDate, escapeSingleQuotes, extractAddressAndType } from '../utils/helper-functions/sql-helpers.js';
@@ -41,6 +41,20 @@ export class Toto {
     static latestDrawDate: Date;
     readonly BASE_URL: string = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
     readonly DATABASE: string = 'Toto';
+    pool: Pool;
+
+    constructor() {
+        this.pool = new Pool({
+            user: 'postgres',
+            host: 'localhost',
+            database: this.DATABASE,
+            password: 'password',
+            port: 5432,
+            max: 20, // maximum number of connections in the pool
+            idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+            connectionTimeoutMillis: 2000, // how long to wait for a connection to be established
+        });
+    }
 
     public static get instance(): Toto {
         if (!Toto.#instance) {
