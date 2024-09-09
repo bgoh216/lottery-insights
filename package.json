@@ -22,6 +22,7 @@
         "typescript": "^5.5.4"
     },
     "dependencies": {
+        "@datastructures-js/priority-queue": "^6.3.1",
         "@types/cheerio": "^0.22.35",
         "axios": "^1.7.4",
         "cheerio": "^1.0.0-rc.12",

@@ -23,8 +23,8 @@ export type FourDResult = {
 export class FourD {
     static #instance: FourD;
     static latestDrawDate: Date;
-    readonly BASE_URL: string = 'https://www.singaporepools.com.sg/en/product/Pages/4d_results.aspx';
-    readonly DATABASE: string = '4D';
+    static readonly BASE_URL: string = 'https://www.singaporepools.com.sg/en/product/Pages/4d_results.aspx';
+    static readonly DATABASE: string = '4D';
 
     public static get instance(): FourD {
         if (!FourD.#instance) {
@@ -80,13 +80,23 @@ export class FourD {
 
     }
 
+    public static getClientConfig() {
+        return {
+            user: 'postgres',
+            password: 'password',
+            host: 'localhost',
+            port: 5432,
+            database: this.DATABASE,
+        };
+    }
+
     public async getAllDrawList(): Promise<DrawInfo[]> {
         console.log('Fetching 4D draw list...');
         const browser = await puppeteer.launch({ headless: true });
         const page = await browser.newPage();
 
         try {
-            await page.goto(this.BASE_URL, { waitUntil: 'networkidle0' });
+            await page.goto(FourD.BASE_URL, { waitUntil: 'networkidle0' });
 
             // Wait for the dropdown to be present
             await page.waitForSelector('.form-control.selectDrawList', { timeout: 10000 });
@@ -122,7 +132,7 @@ export class FourD {
             password: 'password',
             host: 'localhost',
             port: 5432,
-            database: this.DATABASE,
+            database: FourD.DATABASE,
         });
         await client.connect();
         console.log(`Successfully connected to ${client.database} database.`);

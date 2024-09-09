@@ -1,4 +1,4 @@
-import pg from 'pg';
+import pg, { ClientConfig } from 'pg';
 import { v4 as uuidv4 } from 'uuid';
 
 import { createDrawTable } from './sql-queries/create/create-draw-table.js';
@@ -214,15 +214,9 @@ export async function save4dToDatabase(result: FourDResult): Promise<void> {
 
 
 
-export async function getData(sqlQuery: string): Promise<any> {
+export async function getData(clientConfig: ClientConfig, sqlQuery: string): Promise<any> {
     const { Client } = pg;
-    const client = new Client({
-        user: 'postgres',
-        password: 'password',
-        host: 'localhost',
-        port: 5432,
-        database: 'Toto',
-    });
+    const client = new Client(clientConfig);
     await client.connect();
     console.log(`Successfully connected to ${client.database} database.`);
 

@@ -39,22 +39,22 @@ export interface TotoResult {
 export class Toto {
     static #instance: Toto;
     static latestDrawDate: Date;
-    readonly BASE_URL: string = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
-    readonly DATABASE: string = 'Toto';
-    pool: Pool;
+    static readonly BASE_URL: string = 'https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx';
+    static readonly DATABASE: string = 'Toto';
+    // pool: Pool;
 
-    constructor() {
-        this.pool = new Pool({
-            user: 'postgres',
-            host: 'localhost',
-            database: this.DATABASE,
-            password: 'password',
-            port: 5432,
-            max: 20, // maximum number of connections in the pool
-            idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-            connectionTimeoutMillis: 2000, // how long to wait for a connection to be established
-        });
-    }
+    // constructor() {
+    //     this.pool = new Pool({
+    //         user: 'postgres',
+    //         host: 'localhost',
+    //         database: this.DATABASE,
+    //         password: 'password',
+    //         port: 5432,
+    //         max: 20, // maximum number of connections in the pool
+    //         idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+    //         connectionTimeoutMillis: 2000, // how long to wait for a connection to be established
+    //     });
+    // }
 
     public static get instance(): Toto {
         if (!Toto.#instance) {
@@ -62,6 +62,16 @@ export class Toto {
         }
 
         return Toto.#instance;
+    }
+
+    public static getClientConfig() {
+        return {
+            user: 'postgres',
+            password: 'password',
+            host: 'localhost',
+            port: 5432,
+            database: Toto.DATABASE,
+        };
     }
 
     // Scraping function for 4D
@@ -189,7 +199,7 @@ export class Toto {
         const page = await browser.newPage();
 
         try {
-            await page.goto(this.BASE_URL, { waitUntil: 'networkidle0' });
+            await page.goto(Toto.BASE_URL, { waitUntil: 'networkidle0' });
 
             // Wait for the dropdown to be present
             await page.waitForSelector('.form-control.selectDrawList', { timeout: 10000 });
@@ -225,7 +235,7 @@ export class Toto {
             password: 'password',
             host: 'localhost',
             port: 5432,
-            database: this.DATABASE,
+            database: Toto.DATABASE,
         });
         await client.connect();
         console.log(`Successfully connected to ${client.database} database.`);

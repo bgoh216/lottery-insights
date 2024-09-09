@@ -19,7 +19,7 @@ async function runETL(): Promise<void> {
         console.log(`Found ${drawInfos.length} draws`);
 
         for (const draw of drawInfos) {
-            const url = `${instanceToto.BASE_URL}?${draw.querystring}`;
+            const url = `${Toto.BASE_URL}?${draw.querystring}`;
             console.log(`Crawling: ${url}...`);
 
             const data = await instanceToto.scrapeData(url);
@@ -40,7 +40,7 @@ async function runETL(): Promise<void> {
         console.log(`Found ${drawInfos.length} draws`);
 
         for (const draw of drawInfos) {
-            const url = `${instance4D.BASE_URL}?${draw.querystring}`;
+            const url = `${FourD.BASE_URL}?${draw.querystring}`;
             console.log(`Crawling: ${url}...`);
 
             const data = await instance4D.scrapeData(url);
@@ -66,7 +66,7 @@ const instance4D = FourD.instance;
 const instanceToto = Toto.instance;
 
 // Run the ETL process immediately (for testing)
-runETL();
+// runETL();
 
 // console.log('ETL pipeline started. Waiting for scheduled runs...');
 // dotenv.config();

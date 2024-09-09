@@ -4,6 +4,7 @@ import { readFileToString } from '../../utils/helper-functions/sql-helpers.js';
 import path from 'path';
 import { promises as fs } from 'fs';
 import { fileURLToPath } from 'url';
+import { Toto } from '../../models/Toto.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,7 +12,7 @@ const __dirname = path.dirname(__filename);
 export const totoRoutes = Router();
 
 totoRoutes.get('/top-numbers', async (req, res) => {
-  const data: any = await getData(await readFileToString('easter-egg/winning-number-distribution.sql'));
+  const data: any = await getData(Toto.getClientConfig(), await readFileToString('easter-egg/winning-number-distribution.sql'));
   const htmlContent = `
     <!DOCTYPE html>
     <html lang="en">
@@ -138,7 +139,7 @@ totoRoutes.get('/top-numbers', async (req, res) => {
 });
 
 totoRoutes.get('/top-address', async (req, res) => {
-  const data: any = await getData(await readFileToString('easter-egg/winning-store-locations.sql'));
+  const data: any = await getData(Toto.getClientConfig(), await readFileToString('easter-egg/winning-store-locations.sql'));
 
   try {
     // Read the HTML template
