@@ -1,6 +1,6 @@
 SELECT 
-    -- d.draw_no,
-    -- d.date,
+    d.draw_no,
+    d.date,
     d.first_prize,
     d.second_prize,
     d.third_prize,
