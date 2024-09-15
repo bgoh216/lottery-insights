@@ -135,7 +135,7 @@ totoRoutes.get('/top-numbers', async (req, res) => {
     </html>
   `;
 
-  res.send(htmlContent);
+  res.send(data.rows);
 });
 
 totoRoutes.get('/top-address', async (req, res) => {
