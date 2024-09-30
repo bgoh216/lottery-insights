@@ -17,7 +17,7 @@ export async function initializeTotoDatabase() {
         const client = new Client({
             user: 'postgres',
             password: 'password',
-            host: 'localhost',
+            host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
             port: 5432,
             database: 'Toto',
         });
@@ -43,7 +43,7 @@ export async function initialize4dDatabase() {
         const client = new Client({
             user: 'postgres',
             password: 'password',
-            host: 'localhost',
+            host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
             port: 5432,
             database: '4D',
         });
@@ -68,7 +68,7 @@ export async function saveTotoToDatabase(totoData: TotoResult): Promise<void> {
     const client = new Client({
         user: 'postgres',
         password: 'password',
-        host: 'localhost',
+        host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
         port: 5432,
         database: 'Toto',
     });
@@ -143,7 +143,7 @@ export async function save4dToDatabase(result: FourDResult): Promise<void> {
     const client = new Client({
         user: 'postgres',
         password: 'password',
-        host: 'localhost',
+        host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
         port: 5432,
         database: '4D',
     });

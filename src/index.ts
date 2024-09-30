@@ -66,7 +66,7 @@ const instance4D = FourD.instance;
 const instanceToto = Toto.instance;
 
 // Run the ETL process immediately (for testing)
-// runETL();
+runETL();
 
 // console.log('ETL pipeline started. Waiting for scheduled runs...');
 // dotenv.config();
@@ -87,5 +87,5 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-    console.log(`[server]: Server is running at http://localhost:${port}`);
+    console.log(`[server]: Server is running at http://database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com:${port}`);
 });

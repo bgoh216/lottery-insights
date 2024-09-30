@@ -46,7 +46,7 @@ export class Toto {
     // constructor() {
     //     this.pool = new Pool({
     //         user: 'postgres',
-    //         host: 'localhost',
+    //         host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
     //         database: this.DATABASE,
     //         password: 'password',
     //         port: 5432,
@@ -68,7 +68,7 @@ export class Toto {
         return {
             user: 'postgres',
             password: 'password',
-            host: 'localhost',
+            host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
             port: 5432,
             database: Toto.DATABASE,
         };
@@ -233,7 +233,7 @@ export class Toto {
         const client = new Client({
             user: 'postgres',
             password: 'password',
-            host: 'localhost',
+            host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
             port: 5432,
             database: Toto.DATABASE,
         });

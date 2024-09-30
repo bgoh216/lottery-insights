@@ -84,7 +84,7 @@ export class FourD {
         return {
             user: 'postgres',
             password: 'password',
-            host: 'localhost',
+            host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
             port: 5432,
             database: this.DATABASE,
         };
@@ -130,7 +130,7 @@ export class FourD {
         const client = new Client({
             user: 'postgres',
             password: 'password',
-            host: 'localhost',
+            host: 'database-1.cziks8mcgmt1.ap-southeast-1.rds.amazonaws.com',
             port: 5432,
             database: FourD.DATABASE,
         });
