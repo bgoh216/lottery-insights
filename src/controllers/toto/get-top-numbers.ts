@@ -160,4 +160,4 @@ totoRoutes.get('/top-address', async (req, res) => {
     console.error('Error rendering lottery results:', error);
     res.status(500).send('An error occurred while rendering the lottery results.');
   }
-});
+}); 
